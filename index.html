@@ -86,14 +86,13 @@
         }
         .btn:hover { background: #d35400; }
 
-        /* Responsywność - poprawka dla telefonów */
-/* Responsywność - wersja poprawiona (szklista i stabilna) */
+ /* Responsywność - wersja z animowanymi dymkami */
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centruje dymki w osi pionowej */
+        align-items: center; 
         padding: 40px 10px;
         background-attachment: scroll;
     }
@@ -110,22 +109,20 @@
         font-size: 0.85rem;
         padding: 12px 15px;
         
-        /* Zwiększona przeźroczystość: 0.4 zamiast 0.85 */
+        /* Styl "szklany" */
         background: rgba(255, 255, 255, 0.4); 
-        /* Mocniejszy blur, aby tekst był czytelny na przeźroczystym tle */
         backdrop-filter: blur(10px); 
         -webkit-backdrop-filter: blur(10px);
-        
-        /* Usuwamy kolorowe paski, dodajemy bardzo delikatną białą obwódkę */
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 15px;
-        
-        opacity: 1;
-        animation: none;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+        /* PRZYWRÓCENIE ANIMACJI */
+        opacity: 0; /* Dymek jest domyślnie niewidoczny */
+        animation: fadeIn 1.2s ease-out forwards; /* Korzystamy z wcześniej zdefiniowanego fadeIn */
     }
 
-    /* Naprzemienne układanie bez pasków */
+    /* Naprzemienne układanie dymków (zygzak) */
     .bubble:nth-child(even) {
         align-self: flex-end;
     }
@@ -137,23 +134,25 @@
         display: none;
     }
 
-    /* NAPRAWA PRZYCISKU */
+    /* NAPRAWA PRZYCISKU I JEGO WIDOCZNOŚĆ */
     .cta-container {
         position: relative;
-        bottom: auto;
-        margin-top: 40px; /* Odstęp od dymków */
+        margin-top: 40px;
         width: 100%;
         display: flex;
         justify-content: center;
+        /* Przycisk też może się pojawić z opóźnieniem */
+        opacity: 0;
+        animation: fadeIn 1s ease-out 3.5s forwards; 
     }
 
     .btn {
         display: inline-block;
-        width: 90%; /* Przycisk dopasowany do szerokości ekranu */
+        width: 90%;
         max-width: 300px;
         padding: 15px 10px;
         font-size: 1rem;
-        white-space: normal; /* Pozwala tekstowi ładnie się zawijać, jeśli jest za długi */
+        white-space: normal;
         line-height: 1.2;
         text-align: center;
     }
