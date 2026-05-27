@@ -3,17 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zdolność na Plus - Twój przewodnik po kredycie mieszkaniowym</title>
+    <title>Twój Doradca Kredytowy - Poradnik i Kalkulatory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f7f6; color: #333; }
-        h1 { color: #2c3e50; }
-        p { font-size: 18px; max-width: 600px; margin: 20px auto; line-height: 1.6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+
+        /* Nawigacja - przygotowana pod przyszłe kalkulatory */
+        nav { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        /* Sekcja główna z obrazkiem */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Stylizacja dymków */
+        .bubble {
+            position: absolute;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 0.9rem;
+            max-width: 200px;
+            font-weight: 500;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* "Ogonek" dymka */
+        .bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: white transparent;
+        }
+
+        /* Pozycjonowanie dymków - do dopasowania pod obrazek */
+        .b1 { top: 10%; left: 15%; animation-delay: 0.5s; }
+        .b2 { top: 25%; right: 15%; animation-delay: 1s; }
+        .b3 { bottom: 30%; left: 10%; animation-delay: 1.5s; }
+        .b4 { top: 5%; right: 35%; animation-delay: 2s; }
+        .b5 { bottom: 15%; right: 20%; animation-delay: 2.5s; }
+        .b6 { bottom: 50%; left: 40%; animation-delay: 3s; font-style: italic; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-container {
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn {
+            background: #e67e22;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #d35400; }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .bubble { font-size: 0.7rem; max-width: 150px; }
+            .hero-section { height: 60vh; }
+        }
     </style>
 </head>
 <body>
-    <h1>Witaj w projekcie Zdolność na Plus! 🏠📈</h1>
-    <p>Buduję przestrzeń, która pomoże Ci bezpiecznie oszacować swoją zdolność kredytową bez podawania wrażliwych danych. Znajdziesz tu praktyczne, proste porady i ciekawostki, które realnie przygotują Cię do rozmowy z bankiem.</p>
-    <p><strong>Strona w budowie. Pierwsze porady już wkrótce!</strong></p>
+
+    <nav>
+        <a href="#">Start</a>
+        <a href="#">Kalkulator Zdolności</a>
+        <a href="#">Kalkulator Nadpłat</a>
+        <a href="#">FAQ</a>
+        <a href="#">Kontakt</a>
+    </nav>
+
+    <div class="hero-section">
+        <!-- Dymki z pytaniami -->
+        <div class="bubble b1">Czy mamy taką zdolność kredytową?</div>
+        <div class="bubble b2">Którą ofertę kredytu wybrać?</div>
+        <div class="bubble b3">Czy wybrać oprocentowanie stałe czy zmienne?</div>
+        <div class="bubble b4">Czy możemy obniżyć koszty kredytu?</div>
+        <div class="bubble b5">Ile własnych pieniędzy potrzebujemy do zakupu mieszkania?</div>
+        <div class="bubble b6">Tyle jeszcze innych kwestii do rozważenia...</div>
+
+        <div class="cta-container">
+            <a href="#" class="btn">Pomogę Ci przejść przez ten proces</a>
+        </div>
+    </div>
+
+    <section style="padding: 50px 20px; text-align: center;">
+        <h2>Witaj na Twoim nowym przewodniku kredytowym</h2>
+        <p>Jako doradca kredytowy pomagam odpowiedzieć na powyższe pytania. Wykorzystaj moje kalkulatory, aby przygotować się do zakupu mieszkania.</p>
+    </section>
+
 </body>
 </html>
-
