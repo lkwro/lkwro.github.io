@@ -87,37 +87,53 @@
         .btn:hover { background: #d35400; }
 
         /* Responsywność - poprawka dla telefonów */
+/* Responsywność - wersja z półprzezroczystością i naprzemiennym układem */
 @media (max-width: 600px) {
     .hero-section {
-        height: auto; /* Pozwalamy sekcji rosnąć wraz z dymkami */
+        height: auto;
         display: flex;
-        flex-direction: column; /* Układamy dymki w pionie */
-        align-items: center;
-        padding: 40px 10px;
-        background-attachment: scroll; /* Zapobiega problemom z tłem na telefonach */
+        flex-direction: column;
+        padding: 40px 15px;
+        background-attachment: scroll;
     }
 
     .bubble {
-        position: relative; /* Dymki przestają "pływać" i układają się po kolei */
+        position: relative;
         top: auto !important;
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
-        margin: 10px 0; /* Odstęp między dymkami */
-        width: 90%;
-        max-width: 300px;
-        opacity: 1; /* Pokazujemy je od razu na telefonie dla lepszego UX */
+        margin: 8px 0;
+        width: 80%; /* Mniejsze dymki */
+        max-width: 250px;
+        font-size: 0.8rem; /* Mniejszy tekst */
+        padding: 10px 15px;
+        /* Półprzezroczyste białe tło (0.8 to poziom krycia) */
+        background: rgba(255, 255, 255, 0.85); 
+        backdrop-filter: blur(5px); /* Delikatne rozmycie tła pod dymkiem */
+        opacity: 1;
         animation: none;
     }
 
+    /* Co drugi dymek wyrównany do prawej */
+    .bubble:nth-child(even) {
+        align-self: flex-end;
+        border-right: 4px solid #e67e22; /* Akcent kolorystyczny z boku */
+    }
+
+    /* Co pierwszy dymek wyrównany do lewej */
+    .bubble:nth-child(odd) {
+        align-self: flex-start;
+        border-left: 4px solid #2c3e50;
+    }
+
     .bubble::after {
-        display: none; /* Ukrywamy "ogonek" dymka, by zaoszczędzić miejsce */
+        display: none; /* Ukrywamy ogonki dla czystszego wyglądu */
     }
 
     .cta-container {
         position: relative;
-        bottom: auto;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
     </style>
