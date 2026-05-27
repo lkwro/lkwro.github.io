@@ -86,14 +86,14 @@
         }
         .btn:hover { background: #d35400; }
 
-/* Responsywność - wersja ostatecznie poprawiona */
+/* Responsywność - wersja z podwójnym odstępem przycisku */
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center; 
-        padding: 40px 10px 60px 10px; /* Dodany padding na dole (60px) */
+        padding: 40px 10px 80px 10px; /* Zwiększony padding na dole dla lepszego balansu */
         background-attachment: scroll;
     }
 
@@ -115,7 +115,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 15px;
 
-        /* NAPRAWA ANIMACJI: Rozbijamy na części, by nie psuć animation-delay */
+        /* Animacja dymków */
         opacity: 0;
         animation-name: fadeIn;
         animation-duration: 1.2s;
@@ -127,29 +127,29 @@
     .bubble:nth-child(odd) { align-self: flex-start; }
     .bubble::after { display: none; }
 
-    /* NAPRAWA PRZYCISKU: Pozycjonowanie i odstępy */
+    /* KONFIGURACJA PRZYCISKU Z PODWÓJNYM ODSTĘPEM */
     .cta-container {
         position: relative;
-        margin-top: 60px;    /* Większy odstęp od ostatniego dymka */
-        margin-bottom: 20px; /* Odstęp od dolnej krawędzi sekcji hero */
+        margin-top: 120px;    /* PODWÓJNY ODSTĘP od ostatniego dymka */
+        margin-bottom: 40px;   /* Dodatkowy margines na dole, by przycisk nie "dusił się" */
         width: 100%;
         display: flex;
         justify-content: center;
         opacity: 0;
-        /* Przycisk pojawia się na samym końcu */
         animation: fadeIn 1s ease-out 3.5s forwards; 
     }
 
     .btn {
         display: block;
-        width: 80%;
-        max-width: 280px;
+        width: 85%;
+        max-width: 300px;
         padding: 18px 10px;
-        font-size: 1rem;
+        font-size: 1.1rem; /* Lekko większy tekst dla lepszej czytelności */
         text-align: center;
         line-height: 1.3;
         white-space: normal;
-        word-wrap: break-word; /* Zabezpieczenie przed rozbijaniem tekstu */
+        word-wrap: break-word;
+        box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3); /* Delikatna poświata przycisku */
     }
 }
     </style>
