@@ -86,11 +86,40 @@
         }
         .btn:hover { background: #d35400; }
 
-        /* Responsywność */
-        @media (max-width: 768px) {
-            .bubble { font-size: 0.7rem; max-width: 150px; }
-            .hero-section { height: 60vh; }
-        }
+        /* Responsywność - poprawka dla telefonów */
+@media (max-width: 600px) {
+    .hero-section {
+        height: auto; /* Pozwalamy sekcji rosnąć wraz z dymkami */
+        display: flex;
+        flex-direction: column; /* Układamy dymki w pionie */
+        align-items: center;
+        padding: 40px 10px;
+        background-attachment: scroll; /* Zapobiega problemom z tłem na telefonach */
+    }
+
+    .bubble {
+        position: relative; /* Dymki przestają "pływać" i układają się po kolei */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 10px 0; /* Odstęp między dymkami */
+        width: 90%;
+        max-width: 300px;
+        opacity: 1; /* Pokazujemy je od razu na telefonie dla lepszego UX */
+        animation: none;
+    }
+
+    .bubble::after {
+        display: none; /* Ukrywamy "ogonek" dymka, by zaoszczędzić miejsce */
+    }
+
+    .cta-container {
+        position: relative;
+        bottom: auto;
+        margin-top: 30px;
+    }
+}
     </style>
 </head>
 <body>
