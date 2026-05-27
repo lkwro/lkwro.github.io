@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przewodnik kredytowy</title>
+    <title>Przewodnik Hipoteczny - Poradnik i Kalkulatory</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Link do Twojego zewnętrznego pliku CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Dodatkowa poprawka stylów, aby linki-dymki nie miały podkreślenia */
+        .bubble { text-decoration: none; color: inherit; display: block; }
+        .bubble:hover { transform: scale(1.05); transition: transform 0.3s; }
+    </style>
 </head>
 <body>
-    
+
     <nav>
-        <a href="#">Kalkulator Zdolności</a>
-        <a href="#">Kalkulator Nadpłat</a>
-        <a href="#">FAQ</a>
-        <a href="#">Kontakt</a>
+        <a href="index.html">Start</a>
+        <a href="zdolnosc.html">Kalkulator Zdolności</a>
+        <a href="nadplaty.html">Kalkulator Nadpłat</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <div class="hero-section">
-        <!-- Dymki z pytaniami -->
-        <div class="bubble b1">Czy mamy taką zdolność kredytową?</div>
-        <div class="bubble b2">Którą ofertę wybrać?</div>
-        <div class="bubble b3">Oprocentowanie stałe czy zmienne?</div>
-        <div class="bubble b4">Jak obniżyć koszty kredytu?</div>
-        <div class="bubble b5">Ile potrzeba własnych środków?</div>
-        <div class="bubble b6">Tyle innych kwestii do rozważenia...</div>
+        <!-- Dymki prowadzące do sekcji FAQ -->
+        <a href="faq.html" class="bubble b1">Czy mamy taką zdolność kredytową?</a>
+        <a href="faq.html" class="bubble b2">Którą ofertę kredytu wybrać?</a>
+        <a href="faq.html" class="bubble b3">Czy wybrać oprocentowanie stałe czy zmienne?</a>
+        <a href="faq.html" class="bubble b4">Czy możemy obniżyć koszty kredytu?</a>
+        <a href="faq.html" class="bubble b5">Ile własnych pieniędzy potrzebujemy do zakupu mieszkania?</a>
+        <a href="faq.html" class="bubble b6">Tyle jeszcze innych kwestii do rozważenia...</a>
 
         <div class="cta-container">
-            <a href="#" class="btn">Pomogę Ci przejść przez ten proces</a>
+            <a href="kontakt.html" class="btn">Pomogę Ci przejść przez ten proces</a>
         </div>
     </div>
 
     <section style="padding: 50px 20px; text-align: center;">
-        <h2>Witaj w przewodniku kredytowym</h2>
-        <p>Jako ekspert kredytowy pomagam odpowiedzieć na powyższe pytania. Wykorzystaj moją wiedzę, aby przygotować się do zakupu mieszkania.</p>
+        <h2>Witaj w Twoim przewodniku kredytowym</h2>
+        <p>Jako <strong>Przewodnik Hipoteczny</strong> pomagam odpowiedzieć na powyższe pytania [2]. Wykorzystaj moje kalkulatory i bazę wiedzy, aby świadomie przygotować się do zakupu mieszkania.</p>
     </section>
 
 </body>
