@@ -86,14 +86,14 @@
         }
         .btn:hover { background: #d35400; }
 
- /* Responsywność - wersja z animowanymi dymkami */
+/* Responsywność - wersja ostatecznie poprawiona */
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center; 
-        padding: 40px 10px;
+        padding: 40px 10px 60px 10px; /* Dodany padding na dole (60px) */
         background-attachment: scroll;
     }
 
@@ -109,52 +109,47 @@
         font-size: 0.85rem;
         padding: 12px 15px;
         
-        /* Styl "szklany" */
         background: rgba(255, 255, 255, 0.4); 
         backdrop-filter: blur(10px); 
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
-        /* PRZYWRÓCENIE ANIMACJI */
-        opacity: 0; /* Dymek jest domyślnie niewidoczny */
-        animation: fadeIn 1.2s ease-out forwards; /* Korzystamy z wcześniej zdefiniowanego fadeIn */
+        /* NAPRAWA ANIMACJI: Rozbijamy na części, by nie psuć animation-delay */
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
     }
 
-    /* Naprzemienne układanie dymków (zygzak) */
-    .bubble:nth-child(even) {
-        align-self: flex-end;
-    }
-    .bubble:nth-child(odd) {
-        align-self: flex-start;
-    }
+    .bubble:nth-child(even) { align-self: flex-end; }
+    .bubble:nth-child(odd) { align-self: flex-start; }
+    .bubble::after { display: none; }
 
-    .bubble::after {
-        display: none;
-    }
-
-    /* NAPRAWA PRZYCISKU I JEGO WIDOCZNOŚĆ */
+    /* NAPRAWA PRZYCISKU: Pozycjonowanie i odstępy */
     .cta-container {
         position: relative;
-        margin-top: 40px;
+        margin-top: 60px;    /* Większy odstęp od ostatniego dymka */
+        margin-bottom: 20px; /* Odstęp od dolnej krawędzi sekcji hero */
         width: 100%;
         display: flex;
         justify-content: center;
-        /* Przycisk też może się pojawić z opóźnieniem */
         opacity: 0;
+        /* Przycisk pojawia się na samym końcu */
         animation: fadeIn 1s ease-out 3.5s forwards; 
     }
 
     .btn {
-        display: inline-block;
-        width: 90%;
-        max-width: 300px;
-        padding: 15px 10px;
+        display: block;
+        width: 80%;
+        max-width: 280px;
+        padding: 18px 10px;
         font-size: 1rem;
-        white-space: normal;
-        line-height: 1.2;
         text-align: center;
+        line-height: 1.3;
+        white-space: normal;
+        word-wrap: break-word; /* Zabezpieczenie przed rozbijaniem tekstu */
     }
 }
     </style>
