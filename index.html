@@ -87,13 +87,14 @@
         .btn:hover { background: #d35400; }
 
         /* Responsywność - poprawka dla telefonów */
-/* Responsywność - wersja z półprzezroczystością i naprzemiennym układem */
+/* Responsywność - wersja poprawiona (szklista i stabilna) */
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 40px 15px;
+        align-items: center; /* Centruje dymki w osi pionowej */
+        padding: 40px 10px;
         background-attachment: scroll;
     }
 
@@ -103,37 +104,58 @@
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
-        margin: 8px 0;
-        width: 80%; /* Mniejsze dymki */
-        max-width: 250px;
-        font-size: 0.8rem; /* Mniejszy tekst */
-        padding: 10px 15px;
-        /* Półprzezroczyste białe tło (0.8 to poziom krycia) */
-        background: rgba(255, 255, 255, 0.85); 
-        backdrop-filter: blur(5px); /* Delikatne rozmycie tła pod dymkiem */
+        margin: 12px 0;
+        width: 85%;
+        max-width: 280px;
+        font-size: 0.85rem;
+        padding: 12px 15px;
+        
+        /* Zwiększona przeźroczystość: 0.4 zamiast 0.85 */
+        background: rgba(255, 255, 255, 0.4); 
+        /* Mocniejszy blur, aby tekst był czytelny na przeźroczystym tle */
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
+        
+        /* Usuwamy kolorowe paski, dodajemy bardzo delikatną białą obwódkę */
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        
         opacity: 1;
         animation: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* Co drugi dymek wyrównany do prawej */
+    /* Naprzemienne układanie bez pasków */
     .bubble:nth-child(even) {
         align-self: flex-end;
-        border-right: 4px solid #e67e22; /* Akcent kolorystyczny z boku */
     }
-
-    /* Co pierwszy dymek wyrównany do lewej */
     .bubble:nth-child(odd) {
         align-self: flex-start;
-        border-left: 4px solid #2c3e50;
     }
 
     .bubble::after {
-        display: none; /* Ukrywamy ogonki dla czystszego wyglądu */
+        display: none;
     }
 
+    /* NAPRAWA PRZYCISKU */
     .cta-container {
         position: relative;
-        margin-top: 20px;
+        bottom: auto;
+        margin-top: 40px; /* Odstęp od dymków */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 90%; /* Przycisk dopasowany do szerokości ekranu */
+        max-width: 300px;
+        padding: 15px 10px;
+        font-size: 1rem;
+        white-space: normal; /* Pozwala tekstowi ładnie się zawijać, jeśli jest za długi */
+        line-height: 1.2;
+        text-align: center;
     }
 }
     </style>
