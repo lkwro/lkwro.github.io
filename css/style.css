@@ -1,82 +1,82 @@
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
 
-        /* Nawigacja - przygotowana pod przyszłe kalkulatory */
-        nav { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
+/* Nawigacja - przygotowana pod przyszłe kalkulatory */
+nav { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
 
-        /* Sekcja główna z obrazkiem */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('../img/mlodaPara.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+/* Sekcja główna z obrazkiem */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../img/mlodaPara.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-        /* Stylizacja dymków */
-        .bubble {
-            position: absolute;
-            background: white;
-            padding: 15px 20px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            font-size: 0.9rem;
-            max-width: 200px;
-            font-weight: 500;
-            animation: fadeIn 1s ease-out forwards;
-            opacity: 0;
-        }
+/* Stylizacja dymków */
+.bubble {
+    position: absolute;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    max-width: 200px;
+    font-weight: 500;
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
 
-        /* "Ogonek" dymka */
-        .bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 20px;
-            border-width: 10px 10px 0;
-            border-style: solid;
-            border-color: white transparent;
-        }
+/* "Ogonek" dymka */
+.bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: white transparent;
+}
 
-        /* Pozycjonowanie dymków - do dopasowania pod obrazek */
-        .b1 { top: 10%; left: 15%; animation-delay: 0.5s; }
-        .b2 { top: 25%; right: 15%; animation-delay: 1s; }
-        .b3 { bottom: 30%; left: 10%; animation-delay: 1.5s; }
-        .b4 { top: 5%; right: 35%; animation-delay: 2s; }
-        .b5 { bottom: 15%; right: 20%; animation-delay: 2.5s; }
-        .b6 { bottom: 50%; left: 40%; animation-delay: 3s; font-style: italic; }
+/* Pozycjonowanie dymków - do dopasowania pod obrazek */
+.b1 { top: 10%; left: 15%; animation-delay: 0.5s; }
+.b2 { top: 25%; right: 15%; animation-delay: 1s; }
+.b3 { bottom: 30%; left: 10%; animation-delay: 1.5s; }
+.b4 { top: 5%; right: 35%; animation-delay: 2s; }
+.b5 { bottom: 15%; right: 20%; animation-delay: 2.5s; }
+.b6 { bottom: 50%; left: 40%; animation-delay: 3s; font-style: italic; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        .cta-container {
-            position: absolute;
-            bottom: 50px;
-            text-align: center;
-            width: 100%;
-        }
+.cta-container {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
 
-        .btn {
-            background: #e67e22;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover { background: #d35400; }
+.btn {
+    background: #e67e22;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn:hover { background: #d35400; }
 
 /* Responsywność - wersja z podwójnym odstępem przycisku */
 @media (max-width: 600px) {
