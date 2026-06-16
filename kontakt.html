@@ -1,2 +1,142 @@
- <h2>O mnie</h2>
-      <p> w budowie</p>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Przewodnik Hipoteczny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .contact-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contact-card,
+        .contact-form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+            min-width: 320px;
+            flex: 1 1 360px;
+        }
+        .contact-card h2,
+        .contact-form h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .contact-card p,
+        .contact-card li {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        .contact-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-field {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-label {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .contact-input,
+        .contact-textarea {
+            border: 1px solid #c5d0d9;
+            border-radius: 14px;
+            padding: 14px 16px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #2c3e50;
+            background: #f9fbfb;
+        }
+        .contact-textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+        .contact-form .btn {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .contact-note {
+            margin-top: 1rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 780px) {
+            .contact-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="zdolnosc.html">Kalkulator Zdolności</a>
+        <a href="nadplaty.html">Kalkulator Nadpłat</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="cta-container" style="position: relative; bottom: auto; top: 40px;">
+            <h1 style="color: white; max-width: 760px; margin: 0 auto; font-size: 2.5rem; line-height: 1.1;">
+                Skontaktuj się i zaplanuj swoją drogę do bezpiecznego kredytu hipotecznego
+            </h1>
+            <p style="color: #f4f7f6; margin-top: 20px; font-size: 1.05rem; max-width: 720px;">
+                Wypełnij formularz, napisz lub zadzwoń — odpowiem szybko i w przejrzysty sposób.<br>
+                Pomogę Ci znaleźć najlepsze warunki kredytowe i przejść przez cały proces.
+            </p>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h2>Kontakt bezpośredni</h2>
+                <ul>
+                    <li><strong>Telefon:</strong> +48 123 456 789</li>
+                    <li><strong>E-mail:</strong> <a href="mailto:kontakt@przewodnikhipoteczny.pl">kontakt@przewodnikhipoteczny.pl</a></li>
+                    <li><strong>Godziny pracy:</strong> pon. - pt. 9:00 - 18:00</li>
+                </ul>
+                <p>Jeśli wolisz, napisz krótką wiadomość, a wrócę do Ciebie z propozycją terminu na bezpłatną konsultację.</p>
+                <p class="contact-note">Formularz na tej stronie jest przykładowy. Aby otrzymać odpowiedź, użyj maila lub połącz się telefonicznie.</p>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <h2>Napisz wiadomość</h2>
+                <div class="contact-field">
+                    <label class="contact-label" for="name">Imię i nazwisko</label>
+                    <input class="contact-input" type="text" id="name" name="name" placeholder="Twoje imię" required>
+                </div>
+                <div class="contact-field">
+                    <label class="contact-label" for="email">E-mail</label>
+                    <input class="contact-input" type="email" id="email" name="email" placeholder="adres@mail.pl" required>
+                </div>
+                <div class="contact-field">
+                    <label class="contact-label" for="message">Treść wiadomości</label>
+                    <textarea class="contact-textarea" id="message" name="message" placeholder="Opisz krótko swój cel i pytania" required></textarea>
+                </div>
+                <button class="btn" type="submit">Wyślij zapytanie</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
