@@ -7,10 +7,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            min-height: 260px;
+            padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-section .cta-container {
+            position: relative;
+            bottom: auto;
+            top: auto;
+            width: 100%;
+            max-width: 900px;
+        }
+        .hero-section h1,
+        .hero-section p {
+            color: white;
+        }
         .contact-section {
             padding: 60px 20px;
             max-width: 1100px;
             margin: 0 auto;
+        }
+        .profile-block {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+            margin-bottom: 30px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+        }
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 22px;
+            flex-shrink: 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .profile-copy h2 {
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+        .profile-copy p {
+            color: #4a5568;
+            line-height: 1.75;
         }
         .contact-grid {
             display: flex;
@@ -78,8 +124,13 @@
             font-size: 0.95rem;
         }
         @media (max-width: 780px) {
+            .profile-block,
             .contact-grid {
                 flex-direction: column;
+            }
+            .profile-photo {
+                width: 100%;
+                height: auto;
             }
         }
     </style>
@@ -95,18 +146,21 @@
     </nav>
 
     <div class="hero-section">
-        <div class="cta-container" style="position: relative; bottom: auto; top: 40px;">
-            <h1 style="color: white; max-width: 760px; margin: 0 auto; font-size: 2.5rem; line-height: 1.1;">
-                Skontaktuj się i zaplanuj swoją drogę do bezpiecznego kredytu hipotecznego
-            </h1>
-            <p style="color: #f4f7f6; margin-top: 20px; font-size: 1.05rem; max-width: 720px;">
-                Wypełnij formularz, napisz lub zadzwoń — odpowiem szybko i w przejrzysty sposób.<br>
-                Pomogę Ci znaleźć najlepsze warunki kredytowe i przejść przez cały proces.
-            </p>
+        <div class="cta-container">
+            <h1>Skontaktuj się i zaplanuj swoją drogę do bezpiecznego kredytu hipotecznego</h1>
+            <p>Wypełnij formularz, napisz lub zadzwoń — odpowiem szybko i w przejrzysty sposób. Pomogę Ci znaleźć najlepsze warunki kredytowe i przejść przez cały proces.</p>
         </div>
     </div>
 
     <section class="contact-section">
+        <div class="profile-block">
+            <img class="profile-photo" src="img/zdj_wizytowka.png" alt="Moje zdjęcie wizytówkowe">
+            <div class="profile-copy">
+                <h2>O mnie</h2>
+                <p>Od ponad 10 lat doradzam klientom wybrać najlepszy kredyt w celu sfinansowania wymarzonego mieszkania. Współpracując ze wszystkimi widzącymi bankami w Polsce, wybieramy zawsze najlepszą i najbardziej optymalną ofertę, dokładnie dopasowaną do potrzeb klienta.</p>
+            </div>
+        </div>
+
         <div class="contact-grid">
             <div class="contact-card">
                 <h2>Kontakt bezpośredni</h2>
