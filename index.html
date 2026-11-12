@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przewodnik Hipoteczny - Poradnik i Kalkulatory</title>
+    <meta name="description" content="Praktyczny poradnik o kredycie hipotecznym: zdolność kredytowa, wybór oferty, oprocentowanie i koszty zakupu mieszkania.">
+    <title>Przewodnik Hipoteczny - poradnik o kredycie hipotecznym</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Link do Twojego zewnętrznego pliku CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Dodatkowa poprawka stylów, aby linki-dymki nie miały podkreślenia */
-        .bubble { text-decoration: none; color: inherit; display: block; }
-        .bubble:hover { transform: scale(1.05); transition: transform 0.3s; }
-    </style>
 </head>
 <body>
 
@@ -19,28 +14,62 @@
         <a href="index.html">Start</a>
         <!-- <a href="zdolnosc.html">Kalkulator Zdolności</a> -->
         <!-- <a href="nadplaty.html">Kalkulator Nadpłat</a> -->
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html">Poradnik</a>
         <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <div class="hero-section">
-        <!-- Dymki prowadzące do sekcji FAQ -->
-        <a href="faq.html" class="bubble b1">Czy mamy taką zdolność kredytową?</a>
-        <a href="faq.html" class="bubble b2">Którą ofertę kredytu wybrać?</a>
-        <a href="faq.html" class="bubble b3">Czy wybrać oprocentowanie stałe czy zmienne?</a>
-        <a href="faq.html" class="bubble b4">Czy możemy obniżyć koszty kredytu?</a>
-        <a href="faq.html" class="bubble b5">Ile własnych pieniędzy potrzebujemy do zakupu mieszkania?</a>
-        <a href="faq.html" class="bubble b6">Tyle jeszcze innych kwestii do rozważenia...</a>
+    <main>
+        <section class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <p class="hero-kicker">Przewodnik po kredycie hipotecznym</p>
+                <h1 id="hero-heading">Kredyt hipoteczny — zrozum, zanim podejmiesz decyzję</h1>
+                <p>Przystępne wyjaśnienia najważniejszych pojęć i zagadnień, które warto poznać przed zakupem mieszkania i rozmową z bankiem.</p>
+            </div>
+        </section>
 
-        <div class="cta-container">
-            <a href="kontakt.html" class="btn">Pomogę Ci przejść przez ten proces</a>
-        </div>
-    </div>
+        <section class="guide-section" aria-labelledby="guide-heading">
+            <div class="guide-heading">
+                <p class="guide-kicker">Poradnik</p>
+                <h2 id="guide-heading">Od czego chcesz zacząć?</h2>
+                <p>Wybierz temat, który jest teraz dla Ciebie najważniejszy.</p>
+            </div>
 
-    <section style="padding: 50px 20px; text-align: center;">
-        <h2>Witaj w Twoim przewodniku kredytowym</h2>
-        <p>Jako <strong>Ekspert kredytowy</strong> pomagam odpowiedzieć na powyższe pytania. Wykorzystaj moją wiedzę, aby świadomie przygotować się do zakupu mieszkania.</p>
-    </section>
+            <div class="guide-grid">
+                <a class="guide-card" href="faq.html#zdolnosc">
+                    <span class="guide-number">01</span>
+                    <h3>Zdolność kredytowa</h3>
+                    <p>Sprawdź, co bank bierze pod uwagę, analizując dochody i sytuację finansową.</p>
+                    <span class="guide-card-link">Przejdź do tematu <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="guide-card" href="faq.html#wybor-oferty">
+                    <span class="guide-number">02</span>
+                    <h3>Wybór oferty</h3>
+                    <p>Dowiedz się, na co zwracać uwagę, porównując propozycje kredytów.</p>
+                    <span class="guide-card-link">Przejdź do tematu <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="guide-card" href="faq.html#oprocentowanie">
+                    <span class="guide-number">03</span>
+                    <h3>Oprocentowanie</h3>
+                    <p>Poznaj różnice między oprocentowaniem stałym i zmiennym.</p>
+                    <span class="guide-card-link">Przejdź do tematu <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="guide-card" href="faq.html#koszty">
+                    <span class="guide-number">04</span>
+                    <h3>Koszty kredytu</h3>
+                    <p>Sprawdź, jakie elementy mogą wpływać na całkowity koszt finansowania.</p>
+                    <span class="guide-card-link">Przejdź do tematu <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="guide-card" href="faq.html#wklad-wlasny">
+                    <span class="guide-number">05</span>
+                    <h3>Wkład własny</h3>
+                    <p>Przeczytaj, ile własnych środków może być potrzebne przy zakupie mieszkania.</p>
+                    <span class="guide-card-link">Przejdź do tematu <span aria-hidden="true">→</span></span>
+                </a>
+            </div>
+
+            <p class="guide-note">Informacje w poradniku mają charakter ogólny. Szczegółowe warunki i sposób oceny wniosku mogą różnić się między bankami.</p>
+        </section>
+    </main>
 
 </body>
 </html>

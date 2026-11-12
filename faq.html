@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Przewodnik Hipoteczny</title>
+    <title>Poradnik hipoteczny - najczęstsze pytania</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,18 +13,18 @@
         <a href="index.html">Start</a>
         <!-- <a href="zdolnosc.html">Kalkulator Zdolności</a> -->
         <!-- <a href="nadplaty.html">Kalkulator Nadpłat</a> -->
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html">Poradnik</a>
         <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <main class="faq-section">
         <section class="faq-header">
             <h1>Najczęstsze pytania</h1>
-            <p>Wybierz jedno z pytań, aby rozwinąć odpowiedź. Na początek uwzględniamy tematy z sekcji dymków.</p>
+            <p>Praktyczne wyjaśnienia o zdolności kredytowej, kosztach i decyzjach związanych z kredytem hipotecznym. Szczegółowe warunki zależą od banku, oferty i Twojej sytuacji.</p>
         </section>
 
         <div class="faq-list">
-            <details class="faq-item" open>
+            <details class="faq-item" id="zdolnosc" open>
                 <summary>Czy mamy taką zdolność kredytową?</summary>
                 <div class="faq-answer">
                     <p>Przy ocenie zdolności kredytowej bank najpierw bierze pod uwagę czynniki jakościowe, a dopiero później ilościowe – czyli wielkość zarobków. Oznacza to, że wielkość zarobków ma znaczenie dopiero wtedy, gdy bank zakwalifikuje źródło dochodów jako akceptowalne. Przy ocenie jakościowej bank według własnych kryteriów ocenia stabilność danego źródła dochodów.</p>
@@ -41,28 +41,51 @@
                     <p>Inne dochody również mogą być uwzględnione w części banków: 800+, alimenty, dochody z mianowania lub powołania, dochody z działalności rolniczej, diety, itd.</p>
                 </div>
             </details>
-            <details class="faq-item">
+            <details class="faq-item" id="wybor-oferty">
                 <summary>Którą ofertę kredytu wybrać?</summary>
                 <div class="faq-answer">
-                    <p>Odpowiedź w przygotowaniu.</p>
+                    <p>Nie ma jednej oferty najlepszej dla każdego. Porównuj propozycje dla tej samej kwoty kredytu, okresu spłaty, wkładu własnego i rodzaju rat. Różnice w założeniach mogą sprawić, że zestawienie ofert będzie mylące.</p>
+                    <p>Przy porównywaniu zwróć uwagę na kilka elementów:</p>
+                    <ol class="faq-points">
+                        <li><strong>Całkowity koszt i RRSO</strong> – sprawdź nie tylko wysokość raty, ale też łączną kwotę do spłaty oraz koszty uwzględnione w formularzu informacyjnym. RRSO ułatwia porównanie, ale jest obliczane na określonych założeniach i nie zastępuje analizy umowy.</li>
+                        <li><strong>Oprocentowanie</strong> – ustal, czy jest okresowo stałe, czy zmienne, z czego się składa i jak może być ustalane po zakończeniu okresu stałej stopy.</li>
+                        <li><strong>Produkty dodatkowe</strong> – sprawdź, czy niższa cena wymaga konta, karty, ubezpieczenia lub innych usług, jak długo trzeba z nich korzystać i ile łącznie kosztują.</li>
+                        <li><strong>Spłata przed terminem</strong> – przeczytaj zasady nadpłat i wcześniejszej spłaty, w tym ewentualne opłaty oraz dostępne sposoby rozliczenia nadpłaty.</li>
+                        <li><strong>Warunki uruchomienia</strong> – porównaj wymagane dokumenty, terminy i warunki wypłaty kredytu, zwłaszcza jeśli zakup jest uzależniony od konkretnej daty.</li>
+                    </ol>
+                    <p>Poproś o aktualne formularze informacyjne i porównaj je na tych samych założeniach. Przed decyzją sprawdź również projekt umowy oraz to, czy rata pozostawi w budżecie miejsce na codzienne wydatki i nieprzewidziane sytuacje.</p>
                 </div>
             </details>
-            <details class="faq-item">
+            <details class="faq-item" id="oprocentowanie">
                 <summary>Czy wybrać oprocentowanie stałe czy zmienne?</summary>
                 <div class="faq-answer">
-                    <p>Odpowiedź w przygotowaniu.</p>
+                    <p>Oba rozwiązania mają inne cechy i nie da się z góry wskazać, które będzie korzystniejsze w przyszłości. Wybór zależy m.in. od warunków konkretnej oferty, domowego budżetu i tego, jaką zmianę raty jesteś w stanie udźwignąć.</p>
+                    <ol class="faq-points">
+                        <li><strong>Oprocentowanie okresowo stałe</strong> – jego wysokość nie zmienia się przez okres wskazany w umowie, co daje większą przewidywalność kosztów w tym czasie. Po zakończeniu tego okresu oprocentowanie jest ustalane zgodnie z zasadami opisanymi w umowie; sprawdź, jakie warianty będą wtedy dostępne.</li>
+                        <li><strong>Oprocentowanie zmienne</strong> – może zmieniać się w trakcie spłaty zgodnie z umową, zwykle w zależności od wskaźnika referencyjnego i marży banku. Zmiana oprocentowania może podnieść albo obniżyć ratę.</li>
+                    </ol>
+                    <p>Porównując oferty, sprawdź, jak długo obowiązuje stała stopa, co stanie się po tym okresie oraz jak często i według jakich zasad może zmieniać się stopa zmienna. Zrób też domowy test budżetu: zastanów się, czy poradzisz sobie z wyższą ratą. Nie opieraj decyzji wyłącznie na prognozach przyszłych stóp procentowych.</p>
                 </div>
             </details>
-            <details class="faq-item">
+            <details class="faq-item" id="koszty">
                 <summary>Czy możemy obniżyć koszty kredytu?</summary>
                 <div class="faq-answer">
-                    <p>Odpowiedź w przygotowaniu.</p>
+                    <p>Można szukać oszczędności na różnych etapach, ale niższa rata nie zawsze oznacza niższy całkowity koszt. Porównuj pełne warunki i sprawdź, czy oszczędność w jednym miejscu nie wiąże się z dodatkowymi opłatami gdzie indziej.</p>
+                    <ol class="faq-points">
+                        <li><strong>Porównaj kilka ofert</strong> – zestaw całkowity koszt, prowizję, oprocentowanie, ubezpieczenia i opłaty za produkty dodatkowe. Jeśli oferta zawiera warunki promocyjne, sprawdź, jak długo obowiązują i co trzeba zrobić, aby je zachować.</li>
+                        <li><strong>Rozważ wysokość kredytu</strong> – większy wkład własny może oznaczać niższą kwotę finansowania, ale nie warto przeznaczać na niego wszystkich oszczędności kosztem rezerwy na nieprzewidziane wydatki.</li>
+                        <li><strong>Dopasuj okres spłaty do budżetu</strong> – krótszy okres zwykle oznacza wyższą ratę, ale mniej czasu na naliczanie odsetek. Dłuższy okres może obniżyć ratę, lecz zwiększyć sumę odsetek.</li>
+                        <li><strong>Sprawdź możliwość nadpłat</strong> – dodatkowe wpłaty mogą zmniejszyć koszt odsetek. Przed nadpłatą przeczytaj umowę i sprawdź ewentualne opłaty oraz to, czy nadpłata obniży ratę, czy skróci okres spłaty.</li>
+                    </ol>
+                    <p>Każde rozwiązanie warto ocenić w całym okresie kredytowania i w kontekście własnego budżetu. Szczegółowe zasady opłat i wcześniejszej spłaty sprawdź w aktualnej umowie i dokumentach banku.</p>
                 </div>
             </details>
-            <details class="faq-item">
+            <details class="faq-item" id="wklad-wlasny">
                 <summary>Ile własnych pieniędzy potrzebujemy do zakupu mieszkania?</summary>
                 <div class="faq-answer">
-                    <p>Odpowiedź w przygotowaniu.</p>
+                    <p>Potrzebna kwota zależy od ceny i wyceny nieruchomości, wymagań banku oraz tego, jakie środki bank uzna za wkład własny. Minimalny akceptowany wkład może się różnić między ofertami, dlatego przed podjęciem zobowiązań sprawdź aktualne warunki wybranego banku.</p>
+                    <p>Wkład własny to nie wszystkie pieniądze potrzebne do zakupu. W budżecie uwzględnij również możliwe koszty dodatkowe, takie jak opłaty notarialne i sądowe, podatek — jeśli ma zastosowanie — wycena nieruchomości, ubezpieczenia, przeprowadzka lub remont. Część wydatków może pojawić się jeszcze przed uruchomieniem kredytu.</p>
+                    <p>Przed zakupem przygotuj zestawienie wszystkich oszczędności i przewidywanych wydatków. Nie zakładaj, że całość środków można przeznaczyć na wkład własny — pozostaw rezerwę na bieżące potrzeby i niespodziewane koszty.</p>
                 </div>
             </details>
         </div>

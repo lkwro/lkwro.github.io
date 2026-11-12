@@ -6,64 +6,137 @@ nav { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
 nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
 nav a:hover { text-decoration: underline; }
 
-/* Sekcja główna z obrazkiem */
+/* Strona główna poradnika */
 .hero-section {
     position: relative;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('../img/mlodaPara.png');
-    background-size: cover;
-    background-position: center;
+    min-height: 430px;
+    padding: 80px 24px;
+    background: linear-gradient(90deg, rgba(20, 38, 55, 0.88), rgba(20, 38, 55, 0.42)),
+                url('../img/mlodaPara.png') center / cover;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
-/* Stylizacja dymków */
-.bubble {
-    position: absolute;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    font-size: 0.9rem;
-    max-width: 200px;
-    font-weight: 500;
-    animation: fadeIn 1s ease-out forwards;
-    opacity: 0;
-}
-
-/* "Ogonek" dymka */
-.bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    border-width: 10px 10px 0;
-    border-style: solid;
-    border-color: white transparent;
-}
-
-/* Pozycjonowanie dymków - do dopasowania pod obrazek */
-.b1 { top: 10%; left: 15%; animation-delay: 0.5s; }
-.b2 { top: 25%; right: 15%; animation-delay: 1s; }
-.b3 { bottom: 30%; left: 10%; animation-delay: 1.5s; }
-.b4 { top: 5%; right: 35%; animation-delay: 2s; }
-.b5 { bottom: 15%; right: 20%; animation-delay: 2.5s; }
-.b6 { bottom: 50%; left: 40%; animation-delay: 3s; font-style: italic; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.cta-container {
-    position: absolute;
-    bottom: 50px;
-    text-align: center;
+.hero-content {
     width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.hero-kicker,
+.guide-kicker {
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-kicker {
+    color: #f5c27b;
+}
+
+.hero-content h1 {
+    max-width: 720px;
+    margin-bottom: 18px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.12;
+}
+
+.hero-content > p:last-child {
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+.guide-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 68px 24px 76px;
+}
+
+.guide-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.guide-kicker {
+    color: #b66b24;
+}
+
+.guide-heading h2 {
+    margin-bottom: 8px;
+    color: #1f3a5f;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.guide-heading > p:last-child {
+    color: #4a5568;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.guide-card {
+    display: flex;
+    min-height: 245px;
+    flex-direction: column;
+    padding: 24px;
+    color: inherit;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-card:hover,
+.guide-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card:focus-visible {
+    outline: 3px solid #b66b24;
+    outline-offset: 3px;
+}
+
+.guide-number {
+    margin-bottom: 18px;
+    color: #b66b24;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.guide-card h3 {
+    margin-bottom: 9px;
+    color: #1f3a5f;
+    font-size: 1.2rem;
+}
+
+.guide-card p {
+    margin-bottom: 22px;
+    color: #4a5568;
+    line-height: 1.65;
+}
+
+.guide-card-link {
+    margin-top: auto;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.guide-note {
+    max-width: 850px;
+    margin: 28px auto 0;
+    color: #5b6570;
+    font-size: 0.92rem;
+    text-align: center;
 }
 
 .btn {
@@ -78,57 +151,23 @@ nav a:hover { text-decoration: underline; }
 }
 .btn:hover { background: #d35400; }
 
-/* Responsywność - wersja z podwójnym odstępem przycisku */
 @media (max-width: 600px) {
     .hero-section {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        padding: 40px 10px 80px 10px; /* Zwiększony padding na dole dla lepszego balansu */
-        background-attachment: scroll;
+        min-height: 390px;
+        padding: 64px 22px;
+        background-position: 58% center;
     }
 
-    .bubble {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        margin: 12px 0;
-        width: 85%;
-        max-width: 280px;
-        font-size: 0.85rem;
-        padding: 12px 15px;
-        
-        background: rgba(255, 255, 255, 0.4); 
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 15px;
-
-        /* Animacja dymków */
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1.2s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
+    .hero-content > p:last-child {
+        font-size: 1rem;
     }
 
-    .bubble:nth-child(even) { align-self: flex-end; }
-    .bubble:nth-child(odd) { align-self: flex-start; }
-    .bubble::after { display: none; }
+    .guide-section {
+        padding: 48px 18px 56px;
+    }
 
-    /* KONFIGURACJA PRZYCISKU Z PODWÓJNYM ODSTĘPEM */
-    .cta-container {
-        position: relative;
-        margin-top: 100px;    /* PODWÓJNY ODSTĘP od ostatniego dymka */
-        margin-bottom: 60px;   /* Dodatkowy margines na dole, by przycisk nie "dusił się" */
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 3.5s forwards; 
+    .guide-card {
+        min-height: 210px;
     }
 
     .btn {
@@ -136,17 +175,19 @@ nav a:hover { text-decoration: underline; }
         width: 85%;
         max-width: 300px;
         padding: 18px 10px;
-        font-size: 1.1rem; /* Lekko większy tekst dla lepszej czytelności */
+        font-size: 1.1rem;
         text-align: center;
         line-height: 1.3;
         white-space: normal;
-        word-wrap: break-word;
-        box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3); /* Delikatna poświata przycisku */
+        overflow-wrap: break-word;
+        box-shadow: 0 4px 20px rgba(230, 126, 34, 0.3);
     }
 }
 
 /* Style dla strony kontakt.html */
 .contact-section {
+    display: grid;
+    gap: 24px;
     padding: 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
@@ -155,9 +196,8 @@ nav a:hover { text-decoration: underline; }
 .profile-block {
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 30px;
-    margin-bottom: 30px;
+    gap: 32px;
+    padding: 32px;
     background: #ffffff;
     border-radius: 24px;
     box-shadow: 0 18px 35px rgba(0,0,0,0.08);
@@ -172,109 +212,83 @@ nav a:hover { text-decoration: underline; }
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.profile-copy h2 {
+.profile-copy h1 {
     margin-bottom: 0.8rem;
     color: #2c3e50;
+    font-size: 2rem;
 }
 
 .profile-copy p {
     color: #4a5568;
     line-height: 1.75;
+    max-width: 680px;
 }
 
-.intro-card {
+.contact-card-featured {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 38px 34px;
     background: #ffffff;
-    padding: 30px;
-    border-radius: 24px;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    border-top: 4px solid #e67e22;
+    border-radius: 20px;
     box-shadow: 0 18px 35px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
+    text-align: center;
 }
 
-.intro-card h2 {
-    margin-bottom: 1rem;
+.contact-kicker {
+    margin-bottom: 8px;
+    color: #b66b24;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.contact-card-featured h2 {
+    margin-bottom: 10px;
     color: #2c3e50;
+    font-size: 1.8rem;
 }
 
-.intro-card p {
+.contact-card-featured > p:not(.contact-kicker):not(.contact-note) {
+    max-width: 560px;
+    margin: 0 auto 20px;
     color: #4a5568;
     line-height: 1.7;
     font-size: 1.03rem;
 }
 
-.contact-grid {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contact-card,
-.contact-form {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 24px;
-    box-shadow: 0 18px 35px rgba(0,0,0,0.08);
-    min-width: 320px;
-    flex: 1 1 360px;
-}
-
-.contact-card h2,
-.contact-form h2 {
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-.contact-card p,
-.contact-card li {
-    margin-bottom: 1rem;
-    color: #4a5568;
-}
-
-.contact-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-field {
-    margin-bottom: 1.2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-label {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-}
-
-.contact-input,
-.contact-textarea {
-    border: 1px solid #c5d0d9;
-    border-radius: 14px;
-    padding: 14px 16px;
-    font-family: inherit;
-    font-size: 1rem;
-    color: #2c3e50;
-    background: #f9fbfb;
-}
-
-.contact-textarea {
-    min-height: 160px;
-    resize: vertical;
-}
-
-.contact-form .btn {
-    width: 100%;
+.contact-email {
     display: inline-flex;
-    justify-content: center;
-    margin-top: 10px;
+    max-width: 100%;
+    padding: 13px 20px;
+    color: #1f3a5f;
+    background: #eef4f8;
+    border-radius: 12px;
+    font-size: clamp(1.05rem, 3vw, 1.3rem);
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+    color: #ffffff;
+    background: #2c3e50;
+}
+
+.contact-email:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
 }
 
 .contact-note {
-    margin-top: 1rem;
-    color: #555;
-    font-size: 0.95rem;
+    margin-top: 20px;
+    color: #5b6570;
+    font-size: 0.93rem;
 }
 
 .faq-section {
@@ -397,15 +411,24 @@ nav a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 780px) {
-    .profile-block,
-    .contact-grid,
-    .faq-list {
+    .profile-block {
         flex-direction: column;
     }
+
     .profile-photo {
-        width: 100%;
-        height: auto;
+        width: 150px;
+        height: 150px;
+        align-self: center;
     }
+
+    .profile-block {
+        padding: 24px;
+    }
+
+    .contact-card-featured {
+        padding: 30px 22px;
+    }
+
     .faq-section {
         padding: 40px 15px;
     }

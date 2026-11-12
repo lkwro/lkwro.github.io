@@ -13,57 +13,29 @@
         <a href="index.html">Start</a>
         <!-- <a href="zdolnosc.html">Kalkulator Zdolności</a> -->
         <!-- <a href="nadplaty.html">Kalkulator Nadpłat</a> -->
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html">Poradnik</a>
         <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <section class="contact-section">
-        <div class="profile-block">
-            <img class="profile-photo" src="img/zdj_wizytowka.png" alt="Moje zdjęcie wizytówkowe">
+    <main class="contact-section">
+        <section class="profile-block" aria-labelledby="about-heading">
+            <img class="profile-photo" src="img/zdj_wizytowka.png" alt="Zdjęcie autora poradnika">
             <div class="profile-copy">
-                <h2>O mnie</h2>
-                <p>Od ponad dziesięciu lat pomagam klientom wybrać najlepszy kredyt w celu sfinansowania 
-                    wymarzonego mieszkania. Współpracując ze wszystkimi wiodącymi bankami w Polsce, 
-                    wybieram zawsze najlepszą i najbardziej optymalną ofertę, dokładnie dopasowaną 
-                    do potrzeb klienta.</p>
+                <h1 id="about-heading">O mnie</h1>
+                <p>Od ponad dziesięciu lat jestem pośrednikiem kredytowy i zajmuję się pomaganiem klientom w kwestiach kredytowych.
+
+                Na tej stronie tworzę poradnik, który pomaga lepiej zrozumieć kredyt hipoteczny i przygotować się do procesu kredytowego.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="intro-card">
-            <h2>Skontaktuj się i zaplanuj swoją drogę do bezpiecznego kredytu hipotecznego</h2>
-            <p>Wypełnij formularz, napisz lub zadzwoń — odpowiem szybko i przejrzysty sposób. Pomogę Ci znaleźć najlepsze warunki kredytowe i przejść przez cały proces.</p>
-        </div>
-
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h2>Kontakt bezpośredni</h2>
-                <ul>
-                    <li><strong>Telefon:</strong> +48 123 456 789</li>
-                    <li><strong>E-mail:</strong> <a href="mailto:kontakt@przewodnikhipoteczny.pl">kontakt@przewodnikhipoteczny.pl</a></li>
-                    <li><strong>Godziny pracy:</strong> pon. - pt. 9:00 - 18:00</li>
-                </ul>
-                <p>Jeśli wolisz, napisz krótką wiadomość, a wrócę do Ciebie z propozycją terminu na bezpłatną konsultację.</p>
-                <p class="contact-note">Formularz na tej stronie jest przykładowy. Aby otrzymać odpowiedź, użyj maila lub połącz się telefonicznie.</p>
-            </div>
-
-            <form class="contact-form" action="#" method="post">
-                <h2>Napisz wiadomość</h2>
-                <div class="contact-field">
-                    <label class="contact-label" for="name">Imię i nazwisko</label>
-                    <input class="contact-input" type="text" id="name" name="name" placeholder="Twoje imię" required>
-                </div>
-                <div class="contact-field">
-                    <label class="contact-label" for="email">E-mail</label>
-                    <input class="contact-input" type="email" id="email" name="email" placeholder="adres@mail.pl" required>
-                </div>
-                <div class="contact-field">
-                    <label class="contact-label" for="message">Treść wiadomości</label>
-                    <textarea class="contact-textarea" id="message" name="message" placeholder="Opisz krótko swój cel i pytania" required></textarea>
-                </div>
-                <button class="btn" type="submit">Wyślij zapytanie</button>
-            </form>
-        </div>
-    </section>
+        <section class="contact-card-featured" aria-labelledby="contact-heading">
+            <p class="contact-kicker">Kontakt</p>
+            <h2 id="contact-heading">Masz pytanie? Napisz do mnie.</h2>
+            <p> </p>
+            <a class="contact-email" href="mailto:kontakt@infokredyt.eu">kontakt@infokredyt.eu</a>
+            <p class="contact-note"></p>
+        </section>
+    </main>
 
 </body>
 </html>
